@@ -79,3 +79,23 @@
 .open-post__heart-count span {
   margin-left: 3px;
 }
+
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(1.1);
+  }
+  100% {
+    color: yellowgreen;
+    transform: scale(2.1);
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartBeat 2s linear infinite;
+}
